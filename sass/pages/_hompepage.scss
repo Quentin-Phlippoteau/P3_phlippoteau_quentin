@@ -1,0 +1,145 @@
+* {
+    font-family: roboto;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+body {
+    width:100%;
+    margin: 0px;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    height: 30px;
+    width: auto;
+}
+
+// SECTION EXPLORE
+
+#explore {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background: $color-grey;
+}
+
+.btn-explore {
+    height: 50px;
+    width: 230px;
+    color: white;
+    border-width: 0px;
+    border-radius: 30px;
+    background: linear-gradient($color-secondary, $color-primary);
+    margin: 20px;
+    cursor: pointer;
+    
+    &:hover {
+        background: linear-gradient($color-primary, $color-secondary);
+    }
+}
+
+.city {
+    background: $color-dark-grey;
+    width: 100%;
+    box-shadow: inset 0px 11px 8px -9px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    & i {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right:1em;
+    }
+}
+
+// SECTION FUNCTIONING
+
+#functioning {
+    width: 100%;
+    height: auto;
+
+    & h2 {
+        padding-left: 20px;
+        font-family: roboto;
+    }
+}
+
+.box-steps {
+    display:flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right:20px;
+
+    &__circle-number {
+        height: 20px;
+        width: 20px;
+        border-radius: 20px;
+        text-align: center;
+        color: white;
+        background: $color-primary;
+        position:absolute;
+        left:10px;
+    }
+    &__btn-function {
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        background: $color-grey;
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 5px 10px 16px -5px rgba(0,0,0,0.3);
+        & i {
+            margin-right: 1em;
+            color: #a9a9a9;
+        }
+
+        &:hover {
+            background: lightness-shift($color-primary);
+        }
+
+    }
+}
+
+
+// SECTION RESTAURANTS
+
+#restaurants {
+    width:100%;
+    height:auto;
+    background:$color-primary;
+    padding: 20px;
+    visibility :hidden;
+}
+
+.card-restaurant {
+    width: calc(100% - 40px);
+    height: 300px;
+    @include flex-center;
+    flex-direction:column;
+    & img {
+        height : 200px;
+        border-radius: 20px 20px 0px 0px;
+        object-fit:cover;
+    }
+}
+
+
+
+
+
+
