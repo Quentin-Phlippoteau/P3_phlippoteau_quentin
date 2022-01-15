@@ -4,7 +4,8 @@
   "description": "P3 Openclassrooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./main.scss:.css/style.css"
+    "sass": "sass --watch ./main.scss: css/style.css",
+    "prefix": "postcss css/style.css --use autoprefixer -d css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 verions",
   "bugs": {
     "url": "https://github.com/Quentin-Phlippoteau/P3_phlippoteau_quentin/issues"
   },

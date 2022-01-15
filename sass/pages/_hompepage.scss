@@ -2,8 +2,22 @@
     font-family: roboto;
 }
 
+h2 {
+    padding: 20px;
+    margin:0px
+}
+
 h3 {
     font-weight: 600;
+}
+
+p {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 body {
@@ -17,11 +31,18 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-header img {
-    height: 30px;
-    width: auto;
+    & img {
+        height: 30px;
+        width: auto;
+    }
+
+    .fa-arrow-left {
+        position :absolute;
+        left: 20px ;
+        top: 15px;
+        font-size: 1.5em;
+    }
 }
 
 // SECTION EXPLORE
@@ -29,22 +50,34 @@ header img {
 #explore {
     width: 100%;
     height: auto;
+    padding-bottom: 40px;
     text-align: center;
     background: $color-grey;
+    & p {
+        margin-top:20px;
+        margin-bottom: 20px;
+    }
 }
 
-.btn-explore {
+.btn-gradient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    
     height: 50px;
     width: 230px;
     color: white;
     border-width: 0px;
     border-radius: 30px;
     background: linear-gradient($color-secondary, $color-primary);
-    margin: 20px;
     cursor: pointer;
+
     
     &:hover {
         background: linear-gradient($color-primary, $color-secondary);
+        transform: scale(1.05);
     }
 }
 
@@ -66,11 +99,7 @@ header img {
 #functioning {
     width: 100%;
     height: auto;
-
-    & h2 {
-        padding-left: 20px;
-        font-family: roboto;
-    }
+    padding-bottom: 40px;
 }
 
 .box-steps {
@@ -103,40 +132,195 @@ header img {
         width: 100%;
         border-radius: 20px;
         box-shadow: 5px 10px 16px -5px rgba(0,0,0,0.3);
+        cursor: pointer;
         & i {
             margin-right: 1em;
             color: #a9a9a9;
         }
 
         &:hover {
-            background: lightness-shift($color-primary);
+            background: $color-primary-light;
+        }
+
+        &:hover .fas {
+            color:$color-primary;
         }
 
     }
 }
-
 
 // SECTION RESTAURANTS
 
 #restaurants {
     width:100%;
     height:auto;
-    background:$color-primary;
-    padding: 20px;
-    visibility :hidden;
+    background:$color-dark-grey;
+    padding-bottom: 40px;
+    
+    & h3 {
+        margin:0px;
+    }
+}
+
+.new {
+    width: 20%;
+    min-width: 100px;
+    height: 15%;
+    background: $color-tertiary;
+    color: darkgreen;
+    position: absolute;
+    top: 10px;
+    right:20px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+
+    & p {
+        font-weight: 500;
+    }
+    
 }
 
 .card-restaurant {
     width: calc(100% - 40px);
-    height: 300px;
+    height: auto;
+    margin: 20px;
+    border-radius: 20px;
+    background: white;
     @include flex-center;
     flex-direction:column;
+    position: relative;
+
+    
     & img {
-        height : 200px;
+        height : 150px;
+        width: 100%;
         border-radius: 20px 20px 0px 0px;
         object-fit:cover;
     }
+
+    &:hover {
+        background: $color-primary-light;
+        transform: scale(1.05);
+		transition: transform 200ms;
+    }
+
+    &__info {
+        border-radius: 0px 0px 20px 20px;
+        width: calc(100% - 40px);
+        height: auto;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        
+        &__txt {
+            display: flex;
+            flex-direction: column;
+        }                
+
+    }
+    
 }
+
+// heart CHECKBOX 
+
+.checkbox-heart {
+    position: absolute;
+    right : 20px;
+    bottom: 30px;   
+}
+
+.fa-heart {
+    display: flex;
+    align-items: baseline;
+    font-size: 1.5em;
+    cursor: pointer;
+
+}
+
+.checkbox-heart input[type="checkbox"], .checkbox-heart .check {
+    display: none;
+}
+
+.checkbox-heart input[type="checkbox"]:checked~ .check {
+    display: inline-block;
+}
+
+.checkbox-heart input[type="checkbox"]:checked~ .uncheck {
+    display: none;
+}
+ 
+.uncheck {
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.check {
+    background: linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0px;
+}
+
+// FOOTER
+
+footer {
+    width: calc(100% - 40px);
+    height: auto;
+    background-color: #353535;
+    display :flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+
+    & h2 {
+        font-family: "shrikhand";
+        color: white;
+        font-weight: 300;
+        padding-left: 0px;
+    }
+
+    & h3 {
+        margin:5px
+    }
+
+    & i {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 1em;
+        height: 1em;
+        width: 1em;
+    }
+
+    & a {
+        display: flex;
+        text-decoration: none;
+        color: white;
+        
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+    & address {
+        color: white;
+        font-weight: 600;
+        font-size: 1.2em; 
+        font-style: normal;
+      
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

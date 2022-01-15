@@ -20,18 +20,20 @@
     <section id="explore">
         <div class="city"><i class="fas fa-map-marker-alt"></i><p>Paris, Belleville</p></div>
         <h2>Réservez le menu qui<br> vous convient</h2>
-        <p>Découvrez des restaurants d'excption,<br> séléctionner par nos soins.</p>
-        <a href="#"><button class="btn-explore"><h3>Explorer nos restaurants</h3></button></a>
+        <p>Découvrez des restaurants d'exception,<br> séléctionner par nos soins.</p>
+        <a href="#"><div class="btn-gradient">Explorer nos restaurants</div></a>
 
     </section>
 
     <section id="functioning">
         <h2>Fonctionnement</h2>
+        
         <div class="box-steps">
             <div class="step">
                 <div class="step__circle-number">1</div>
                 <div class="step__btn-function"><i class="fas fa-mobile-alt"></i><h3>Choisissez un restaurant</h3></div>   
             </div>
+
 
             <div class="step">
                 <div class="step__circle-number">2</div>
@@ -41,18 +43,85 @@
             <div class="step">
                 <div class="step__circle-number">3</div>
                 <div class="step__btn-function"><i class="fas fa-store"></i><h3>Dégustez au restaurant</h3></div>   
-            </div> 
+            </div>
+
         </div>       
     </section>
 
     <section id="restaurants">
         <h2>Restaurants</h2>
+        
+        
         <div class="card-restaurant">
+        <a href="#">    
         <img src="./assets/images/restaurants/palette_gout.jpg" alt="La palette du goût">
-            <div class="info-card"><h3>La palette du goût</h3><br><p>Ménilmontant<p></div>
-            <i class="far fa-heart"></i>
+        <div class="new"><p>Nouveau</p></div>
+            <div class="card-restaurant__info">
+                <div class="card-restaurant__info__txt"><h3>La palette du goût</h3><p>Ménilmontant<p></div>
+            </div>       
+        </a>
+        <label class="checkbox-heart">
+            <input type="checkbox">
+            <i class="fas fa-heart uncheck"></i>
+            <i class="fas fa-heart check"></i>
+        </label>
         </div>
+        
+
+        
+        <div class="card-restaurant">
+        <a href="#">
+        <img src="./assets/images/restaurants/note_enchantee.jpg" alt="La note enchantée">
+            <div class="new"><p>Nouveau</p></div>
+
+            <div class="card-restaurant__info">
+                <div class="card-resturant__info__txt"><h3>La note enchantée</h3><p>Charonne<p></div>
+            </div>
+        </a>
+            <label class="checkbox-heart">
+                <input type="checkbox">
+                <i class="fas fa-heart uncheck"></i>
+                <i class="fas fa-heart check"></i>
+            </label>
+        </div>
+     
+        <div class="card-restaurant">
+        <a href="./a-la-francaise.html">
+        <img src="./assets/images/restaurants/a_la_francaise.jpg" alt="À la française">
+            <div class="card-restaurant__info">
+                <div class="card-resturant__info__txt"><h3>À la française</h3><p>Cité Rouge<p></div>
+            </div>
+        </a>
+            <label class="checkbox-heart">
+                <input type="checkbox">
+                <i class="fas fa-heart uncheck"></i>
+                <i class="fas fa-heart check"></i>
+            </label>           
+        </div>
+                
+        <div class="card-restaurant">
+        <a href="#">
+        <img src="./assets/images/restaurants/delice_sens.jpg" alt="Le délice des sens">
+            <div class="card-restaurant__info">
+                <div class="card-resturant__info__txt"><h3>La palette du goût</h3><p>Folie-Méricourt<p></div>
+            </div>
+        </a>
+            <label class="checkbox-heart">
+                <input type="checkbox">
+                <i class="fas fa-heart uncheck"></i>
+                <i class="fas fa-heart check"></i>
+            </label>            
+        </div>
+        
 
     </section>
+
+    <footer>
+        <h2>Ohmyfood</h2>
+        <a href="#"><i class="fas fa-utensils"></i><h3>Proposer un restaurant</h3></a>
+        <a href="#"><i class="fas fa-hands-helping"></i><h3>Devenir partenaire</h3></a>
+        <a href="#"><h3>Mentions légales</h3></a>
+        <address><a href="mailto:contact@ohmyfood.com">Contact</a></address>
+    </footer>  
 
 </body>
