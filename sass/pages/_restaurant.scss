@@ -51,6 +51,12 @@
     
 }
 
+.box-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
 
 .menu-prev {
     display:flex;
@@ -78,7 +84,7 @@
         background: white;
         box-shadow: 5px 10px 16px -5px rgba(0,0,0,0.3);
         border-radius: 10px;
-        overflow: hidden;
+        
         animation: menu-reveal $anim-dur ease-in-out;
         animation-fill-mode: both;
         @for $i from 1 through $num-cards {
@@ -126,15 +132,29 @@
         justify-content: space-between;
         flex-grow: 1;
         padding: 10px;
+        overflow: hidden;
+
+
+
+
+
+
+
 
         & h3 {
             margin:0px;
             font-size: 1em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         & p {
             font-size: .8em;
             margin-top:5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         &__price{
@@ -142,7 +162,12 @@
             align-items: flex-end;
         }
 
+        &__dish {
+            overflow: hidden;
+        }
+            
     }
+
 
 
 
@@ -174,6 +199,19 @@
         opacity: 1;
         transform: translateY(0%);
     }
+}
+
+@media screen and (min-width:768px) {
+    .box-menu {
+        flex-direction: row;
+        justify-content: space-between;
+
+        & a {
+            width: 30%;
+        }
+    }
+
+
 }
 
 

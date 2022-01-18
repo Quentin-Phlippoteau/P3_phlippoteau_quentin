@@ -6,5 +6,5 @@ $color-grey:#f6f6f6;
 $color-dark-grey:#eaeaea;
 
 $num-cards : 3 ;
-$anim-dur: 2000ms;
-$anim-delay: $anim-dur / $num-cards;
+$anim-dur: 1000ms;
+$anim-delay: calc($anim-dur / $num-cards);
