@@ -1,0 +1,44 @@
+// responsive accueil (index)
+
+
+@media screen and (min-width:440px) {
+    .title {
+        @include flex-center
+    }
+
+    .box-steps {
+        display: flex;
+        align-items: center;
+    }
+
+    .step {
+        width: 400px;
+    }
+
+    #box-restaurants {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .card-restaurant {
+        width: calc(50% - 40px);
+    }
+
+    // responsive restaurant
+
+    .box-menu {
+        align-items: center;
+        
+ 
+    }
+
+    .title-restaurant {
+        justify-content: center;
+    }
+
+    .menu-prev {
+        align-items: center;
+    }
+
+}

@@ -1,7 +1,10 @@
 
 // a la française
 
-
+#main-content {
+    max-width: 992px;
+    margin: 0 auto;
+}
 
 #intro-restaurant {
     width: 100%;
@@ -19,7 +22,6 @@
 
 .title-restaurant {
     display: flex;
-    justify-content: space-between;
     height: auto;
     width: calc(100% - 40px);
     border-radius: 60px 60px 0px 0px;
@@ -55,8 +57,20 @@
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-}
+    width: 100%;
 
+    & a {
+        width: 100%;
+        max-width: 600px;
+
+        animation: menu-reveal $anim-dur ease-in-out;
+        animation-fill-mode: both;
+        @for $i from 1 through $num-cards {
+            &:nth-child(#{$i}) {
+                animation-delay: $anim-delay * $i;
+            }
+    }
+}
 
 .menu-prev {
     display:flex;
@@ -85,15 +99,8 @@
         box-shadow: 5px 10px 16px -5px rgba(0,0,0,0.3);
         border-radius: 10px;
         
-        animation: menu-reveal $anim-dur ease-in-out;
-        animation-fill-mode: both;
-        @for $i from 1 through $num-cards {
-            &--#{$i} {
-                animation-delay: $anim-delay * $i;
-            }
+
         }
-
-
 
         &:hover .menu-check {
             width: 50px;
@@ -134,13 +141,6 @@
         padding: 10px;
         overflow: hidden;
 
-
-
-
-
-
-
-
         & h3 {
             margin:0px;
             font-size: 1em;
@@ -169,8 +169,6 @@
     }
 
 
-
-
 .fa-check {
     background: white;
     border-radius: 20px;
@@ -187,32 +185,9 @@
     }
 }
 
-// animation 
-
-@keyframes menu-reveal {
-    0% {
-        opacity: 0;
-        transform: translateY(50%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
-
-@media screen and (min-width:768px) {
-    .box-menu {
-        flex-direction: row;
-        justify-content: space-between;
-
-        & a {
-            width: 30%;
-        }
-    }
 
 
-}
+
 
 
 
