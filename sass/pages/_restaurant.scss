@@ -1,11 +1,6 @@
 
 // a la française
 
-#main-content {
-    max-width: 992px;
-    margin: 0 auto;
-}
-
 #intro-restaurant {
     width: 100%;
     height: 500px;
@@ -53,7 +48,7 @@
     
 }
 
-.box-menu {
+.box-dish {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -61,7 +56,7 @@
 
     & a {
         width: 100%;
-        max-width: 600px;
+        max-width: 425px;
 
         animation: menu-reveal $anim-dur ease-in-out;
         animation-fill-mode: both;
@@ -69,6 +64,23 @@
             &:nth-child(#{$i}) {
                 animation-delay: $anim-delay * $i;
             }
+
+            &:hover .menu-check {
+                width: 50px;
+                transition: width 400ms ease-in-out;
+                
+            }
+            
+            &:hover .menu-check i {
+                transform: rotate(360deg);
+                transition: transform 400ms ease-in-out;            
+            }
+    
+            &:not(:hover) .menu-check {
+                width: 0px;
+                transition: width 400ms ease-in-out;
+            }
+        }
     }
 }
 
@@ -77,6 +89,7 @@
     flex-direction: column;
     row-gap: 1em;
     width: calc(100% - 40px);
+    max-width: 400px;
     padding:20px;
 
     &__title {
@@ -98,82 +111,59 @@
         background: white;
         box-shadow: 5px 10px 16px -5px rgba(0,0,0,0.3);
         border-radius: 10px;
-        
-
-        }
-
-        &:hover .menu-check {
-            width: 50px;
-            transition: width 400ms ease-in-out;
-            
-        }
-        
-        &:hover .menu-check i {
-            transform: rotate(360deg);
-            transition: transform 400ms ease-in-out;            
-        }
-
-        &:not(:hover) .menu-check {
-            width: 0px;
-            transition: width 400ms ease-in-out;
-        }
-
-    }
-
-
-    .menu-check {
-        background:$color-tertiary;
-        width: 0px;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform-origin: right;
-        overflow: hidden;
-    }
+        }        
 }
 
- .menu-card {
+.menu-check {
+    background:$color-tertiary;
+    width: 0px;
+    height: auto;
+    @include flex-center;
+    align-items: center;
+    transform-origin: right;
+    overflow: hidden;
+}
 
-        display: flex;
-        justify-content: space-between;
-        flex-grow: 1;
-        padding: 10px;
+.menu-card {
+
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 10px;
+    overflow: hidden;
+
+    & h3 {
+        margin:0px;
+        font-size: 1em;
+        white-space: nowrap;
         overflow: hidden;
-
-        & h3 {
-            margin:0px;
-            font-size: 1em;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        & p {
-            font-size: .8em;
-            margin-top:5px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        &__price{
-            display: flex;
-            align-items: flex-end;
-        }
-
-        &__dish {
-            overflow: hidden;
-        }
-            
+        text-overflow: ellipsis;
     }
+
+    & p {
+        font-size: .8em;
+        margin-top:5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__price {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__dish {
+        overflow: hidden;
+    }
+            
+}
 
 
 .fa-check {
     background: white;
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     align-items: center;
     width: 30px;
     height: 30px;
