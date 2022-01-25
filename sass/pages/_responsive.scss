@@ -1,0 +1,55 @@
+// responsive accueil (index)
+
+
+@media screen and (min-width:545px) {
+    
+    .title {
+        @include flex-center
+    }
+
+    //accueil (545px)
+
+    .box-steps {
+        align-items: center;
+    }
+
+    .step {
+        width: 350px;
+    }
+
+    // responsive restaurant
+
+    #box-restaurants {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-menu {
+        @include flex-center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width:992px) {
+
+    // accueil (992px)
+
+    .box-steps {
+        @include flex-center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    #box-restaurants {
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+        flex-wrap: wrap;
+        max-width: 1100px;
+    }
+
+}
