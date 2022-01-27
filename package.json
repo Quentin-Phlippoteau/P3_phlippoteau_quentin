@@ -1,5 +1,5 @@
 {
-  "name": "p3_phlippoteau_quentin",
+  "name": "phlippoteauquentin_3_01012022",
   "version": "1.0.0",
   "description": "P3 Openclassrooms",
   "main": "index.js",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Quentin-Phlippoteau/P3_phlippoteau_quentin.git"
+    "url": "git+https://github.com/Quentin-Phlippoteau/PhlippoteauQuentin_3_01012022.git"
   },
   "author": "",
   "license": "ISC",
   "browserslist": "last 4 verions",
   "bugs": {
-    "url": "https://github.com/Quentin-Phlippoteau/P3_phlippoteau_quentin/issues"
+    "url": "https://github.com/Quentin-Phlippoteau/PhlippoteauQuentin_3_01012022/issues"
   },
-  "homepage": "https://github.com/Quentin-Phlippoteau/P3_phlippoteau_quentin#readme"
+  "homepage": "https://github.com/Quentin-Phlippoteau/PhlippoteauQuentin_3_01012022#readme"
 }
