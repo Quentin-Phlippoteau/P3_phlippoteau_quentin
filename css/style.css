@@ -300,6 +300,12 @@ header .fa-arrow-left:hover {
   font-size: 1.5em;
   cursor: pointer;
 }
+.fa-heart:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0px;
+}
 
 .checkbox-heart input[type=checkbox], .checkbox-heart .check {
   display: none;
@@ -584,6 +590,12 @@ footer address {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    max-width: 1060px;
+    margin: auto;
+  }
+
+  .step {
+    margin: 0px;
   }
 
   #box-restaurants {

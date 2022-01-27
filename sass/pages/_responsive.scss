@@ -11,6 +11,7 @@
 
     .box-steps {
         align-items: center;
+
     }
 
     .step {
@@ -42,6 +43,12 @@
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
+        max-width: 1060px;
+        margin: auto;
+    }
+
+    .step {
+        margin: 0px;
     }
 
     #box-restaurants {
