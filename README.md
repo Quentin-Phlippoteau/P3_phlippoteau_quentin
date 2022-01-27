@@ -1,6 +1,6 @@
 ## Projet 3 "Dynamisez une page web avec des animations CSS"
 
-### LIEN GITHUB
+### LIEN PAGE WEB
 
 https://quentin-phlippoteau.github.io/PhlippoteauQuentin_3_01012022/
 
